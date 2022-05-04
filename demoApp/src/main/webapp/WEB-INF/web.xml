@@ -20,4 +20,14 @@
   <url-pattern>/add</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>Square</servlet-name>
+  <servlet-class>com.AleCart.SquareServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Square</servlet-name>
+  <url-pattern>/SquareServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
