@@ -18,10 +18,34 @@ public class SquareServlet extends HttpServlet {
 		
 		out.println("Conexion con el servlet Square");
 		int suma= (int)request.getAttribute("suma");
-		
+		int mult=(int)request.getAttribute("mult");
 		suma*=suma;
 		
 		out.println("La raiz cuadrada de la suma de los valores es: "+suma);
+		out.println("mult:" + mult);
+		
+		/*int num1=Integer.parseInt(request.getParameter("num1"));
+		int num2=Integer.parseInt(request.getParameter("num2"));
+		int suma=num1+num2;
+		
+		//PrintWriter out= response.getWriter();
+		
+		out.print("La suma da: "+suma);(Esto tambien funciona)*/
+		
+	}
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		PrintWriter out= response.getWriter();
+		
+		out.println("Conexion con el servlet Square");
+		int suma=Integer.parseInt(request.getParameter("suma"));
+		//int suma= (int)request.getAttribute("suma");
+		/*int mult=(int)request.getAttribute("mult");*/
+		suma*=suma;
+		
+		
+		out.println("La raiz cuadrada de la suma de los valores es: "+suma);
+		//out.println("mult:" + mult);
 		
 		/*int num1=Integer.parseInt(request.getParameter("num1"));
 		int num2=Integer.parseInt(request.getParameter("num2"));
