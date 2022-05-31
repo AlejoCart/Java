@@ -21,5 +21,9 @@
 	
 	%>
 	</h1>
+	<%! String pref="Sr/Sra";
+	int num=(int)(Math.random()*100);%>  
+	<p> pref: <%=user %> su numero es:<%= num%> </p>
+	
 </body>
 </html>
