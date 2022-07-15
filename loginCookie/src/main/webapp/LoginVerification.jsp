@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="java.util.*" errorPage="error.jsp"%>
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,12 +20,20 @@
 	
 	else if(user.equals("") || password.equals("")) out.print("algo salio mal :$");
 	else out.print("Usuario y/o contraseña incorrectos :) \nintente de nuevo todo desde el inicio");
+	out.println();
+	/*try{
+		int error=9/0;
+	}catch(Exception e){
+		out.print("Error: "+e);
+	}*/
+	
+	int error_2=9/0;
 	
 	%>
 	</h1>
 	<%! String pref="Sr/Sra";
 	int num=(int)(Math.random()*100);%>  
-	<p> pref: <%=user %> su numero es:<%= num%> </p>
-	
+	<p> pref: <%=user %> su nu4mero es:<%= num%> </p>
+	<%@ include file="footer.jsp" %>
 </body>
 </html>
